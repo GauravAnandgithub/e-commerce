@@ -1,4 +1,4 @@
-const port = 4000;
+const PORT =  process.env.PORT || 4000;
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -254,7 +254,7 @@ app.post("/removeproduct", async (req, res) => {
   res.json({success:true,name:req.body.name})
 });
 
-app.listen(port, (error) => {
-  if (!error) console.log("Server Running on port " + port);
+app.listen(PORT, (error) => {
+  if (!error) console.log("Server Running on PORT " + PORT);
   else console.log("Error : ", error);
 });
