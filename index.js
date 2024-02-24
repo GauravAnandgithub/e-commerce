@@ -16,9 +16,14 @@ app.use(cors({
 }))
 
 // Database Connection With MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/ecommerce6");
+//For local
+// mongoose.connect("mongodb://127.0.0.1:27017/ecommerce6");
+
+//For cloud
+mongoose.connect("mongodb+srv://gauravanand6g6:v0pj8q43rHJXnCsq@cluster0.yti12ov.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 // paste your mongoDB Connection string above with password
 // password should not contain '@' special character
+
 
 //Image Storage Engine 
 const storage = multer.diskStorage({
